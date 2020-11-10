@@ -2,8 +2,9 @@
 - Ammar Alifian Fahdan
 - Lii'zza Aisyah Putri Sulistio
 
-topologi.sh
-`# switch
+`topologi.sh`
+~~~
+# switch
 uml_switch -unix switch1 > /dev/null < /dev/null &
 uml_switch -unix switch2 > /dev/null < /dev/null &
 
@@ -17,12 +18,15 @@ xterm -T PROBOLINGGO -e linux ubd0=PROBOLINGGO,jarkom umid=PROBOLINGGO eth0=daem
 
 # client
 xterm -T SIDOARJO -e linux ubd0=SIDOARJO,jarkom umid=SIDOARJO eth0=daemon,,,switch1 mem=96M &
-xterm -T GRESIK -e linux ubd0=GRESIK,jarkom umid=GRESIK eth0=daemon,,,switch1 mem=96M &`
+xterm -T GRESIK -e linux ubd0=GRESIK,jarkom umid=GRESIK eth0=daemon,,,switch1 mem=96M &
+~~~
 
-bye.sh
-`uml_mconsole SURABAYA halt
+`bye.sh`
+~~~
+uml_mconsole SURABAYA halt
 uml_mconsole MALANG halt
 uml_mconsole MOJOKERTO halt
 uml_mconsole PROBOLINGGO halt
 uml_mconsole SIDOARJO halt
-uml_mconsole GRESIK halt`
+uml_mconsole GRESIK halt
+~~~
