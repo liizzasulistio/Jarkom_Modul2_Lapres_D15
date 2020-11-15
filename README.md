@@ -137,7 +137,7 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
 ![no10](https://user-images.githubusercontent.com/58472359/99187119-4795cd00-2787-11eb-92b2-ed13870d26a1.jpg)
 
 ### 11. Pada folder `/public` dibolehkan directory listing namun tidak untuk folder di dalamnya.
-[no11](https://user-images.githubusercontent.com/58472359/99187128-50869e80-2787-11eb-8bfd-5423169b552a.jpg)
+![no11](https://user-images.githubusercontent.com/58472359/99187128-50869e80-2787-11eb-8bfd-5423169b552a.jpg)
 
 ### 12. Disediakan file `404.html` untuk mengatasi error default dari Apache.
 ![no12](https://user-images.githubusercontent.com/58472359/99187131-52e8f880-2787-11eb-8532-bf330dfd52e1.jpg)
