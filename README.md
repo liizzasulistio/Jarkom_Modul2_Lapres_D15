@@ -48,10 +48,11 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
    www         IN CNAME semerud15.pw.
    penanjakan  IN A     10.151.79.132   ;IP PROBOLINGGO
    ~~~
- - Cek dengan cara melakukan `ping [domain]` pada GRESIK dan SIDOARJO, jika sudah menunjukkan IP Server PROBOLINGGO maka jawaban sudah benar
- - `ping semerud15.pw`
- - `ping www.semerud15.pw`
- - `ping penanjakan.semerud15.pw`
+ - Cek dengan cara melakukan `ping [domain]` pada GRESIK dan SIDOARJO, jika sudah menunjukkan IP Server PROBOLINGGO maka jawaban sudah benar.
+ - Lakukan `ping semerud15.pw` dan`ping www.semerud15.pw`
+ <img width="512" alt="Screen Shot 2020-11-15 at 18 27 45" src="https://user-images.githubusercontent.com/58472359/99183924-21b1fd80-2772-11eb-9d14-563c2052a3fc.png">
+ - Lakukan `ping penanjakan.semerud15.pw`
+ <img width="496" alt="Screen Shot 2020-11-15 at 11 58 13" src="https://user-images.githubusercontent.com/58472359/99183926-28407500-2772-11eb-878d-e649ace40ad4.png">
 
 ### 4. Buat reverse domain untuk domain utama
    - Buka file `etc/bind/named.conf.local` kemudian tambahkan konfigurasi berikut ini:
@@ -70,6 +71,7 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
    132                     IN PTR   semerud15.pw.  ;BYTE KE-4 IP PROBOLINGGO
    ~~~
    - Lakukan pengecekan dengan cara `host -t PTR 10.151.79.132`
+   <img width="496" alt="Screen Shot 2020-11-15 at 10 55 12" src="https://user-images.githubusercontent.com/58472359/99183935-3a221800-2772-11eb-8e3c-e4422a859b17.png">
    
    
 ### 5. Buat DNS slave pada MOJOKERTO
@@ -94,6 +96,8 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
    ~~~
    - Lakukan pengecekan dengan menjalankan `service bind9 stop` pada MALANG dan `ping semerud15.pw` di GRESIK atau SIDOARJO.
    - Jika ping dapat dilakukan, maka pembuatan DNS slave berhasil.
+   <img width="496" alt="Screen Shot 2020-11-15 at 12 07 02" src="https://user-images.githubusercontent.com/58472359/99183972-62aa1200-2772-11eb-8255-c05529f2560d.png">
+<img width="496" alt="Screen Shot 2020-11-15 at 11 56 59" src="https://user-images.githubusercontent.com/58472359/99183975-6c337a00-2772-11eb-82d7-f4c98aca616b.png">
    
 ### 6. dan 7. Buat subdomain dengan alamat `http://gunung.semerud15.pw` yang didelegasikan pada server MOJOKERTO dan Buat subdomain dengan alamat `http://naik.gunung.semerud15.pw` yang keduanya diarahkan pada IP Server PROBOLINGGO
    - Pada MALANG tambahkan konfigurasi berikut ini di file `/etc/bind/jarkom/semerud15.pw`
@@ -121,6 +125,9 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
    naik  IN A     gunung.semerud15.pw.
    ~~~
    - Lakukan pengecekan dengan cara `ping gunung.semerud15.pw` dan `ping naik.gunung.semerud15.pw`
+   <img width="496" alt="Screen Shot 2020-11-15 at 11 49 50" src="https://user-images.githubusercontent.com/58472359/99183985-82d9d100-2772-11eb-8a9c-18988f724238.png">
+<img width="512" alt="Screen Shot 2020-11-15 at 11 02 40" src="https://user-images.githubusercontent.com/58472359/99184004-95540a80-2772-11eb-8165-febd0b9a6893.png">
+
    
 ## Web Server
 ### 8.
