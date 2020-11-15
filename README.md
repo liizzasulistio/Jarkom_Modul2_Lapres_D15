@@ -130,4 +130,7 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
 
    
 ## Web Server
-### 8.
+### 8.dan 9. Mengatur Web Server dengan domain `http://semerud15.pw` yang memiliki <i>Document Root</i> pada `/var/www/semerud15.pw`. Kemudian aktifkan mod rewrite agar url yang sebelumnya `http://semerud15.pw/index.php/home` menjadi `http://semerud15.pw/home`.
+
+### 14. dan 15. Web `http://naik.gunung.semerud15.pw` dapat diakses dengan port 8888 dan diberi autentikasi dengan username `semeru` dan password `kuynaikgunung`
+### 16. Setiap mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke `http://semerud15.pw`
