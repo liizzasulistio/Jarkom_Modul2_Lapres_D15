@@ -26,17 +26,17 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
 <img width="496" alt="Screen Shot 2020-11-15 at 10 59 31" src="https://user-images.githubusercontent.com/58472359/99178841-eac7f180-2749-11eb-96b7-bd7e60fecef2.png">
 <img width="496" alt="Screen Shot 2020-11-15 at 11 02 29" src="https://user-images.githubusercontent.com/58472359/99178853-016e4880-274a-11eb-9577-552fcc57c2f3.png">
 
-1. Buat sebuah website utama dengan alamat `http://semerud15.pw`
-   Pada UML MALANG, buka file `etc/bind/named.conf.local` dan isikan konfigurasi domain sebagai berikut:
+### 1. Buat sebuah website utama dengan alamat `http://semerud15.pw`
+   - Pada UML MALANG, buka file `etc/bind/named.conf.local` dan isikan konfigurasi domain sebagai berikut:
    ~~~
    zone "semerud15.pw {
         type master;
         file "/etc/bind/jarkom/semerud15.pw";
    }
    ~~~
-2. dan 3. Website tersebut memiliki alias `http://www.semerud15.pw` dan Subdomain `http://penanjakan.semerud15.pw` yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO
-   Setelah itu copy file db.local dengan cara berikut `cp /etc/bind/db.local /etc/bind/jarkom/semerud15.pw`
-   Kemudian buka file `etc/bind/jarkom/semerud15.pw` dan isikan konfigurasi domain sebagai berikut:
+### 2. dan 3. Website tersebut memiliki alias `http://www.semerud15.pw` dan Subdomain `http://penanjakan.semerud15.pw` yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO
+  - Setelah itu copy file db.local dengan cara berikut `cp /etc/bind/db.local /etc/bind/jarkom/semerud15.pw`
+  - Kemudian buka file `etc/bind/jarkom/semerud15.pw` dan isikan konfigurasi domain sebagai berikut:
    ~~~
    
    ~~~
