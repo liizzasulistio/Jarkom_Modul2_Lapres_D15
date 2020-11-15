@@ -16,13 +16,11 @@ Praktikum mata kuliah Jaringan Komputer Informatika ITS 2020 Kelompok D15
 Karena `yyy` merupakan nama kelompok, maka `semeruyyy.pw` diubah menjadi `semerud15.pw`
 
 Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
--- MALANG
 <img width="496" alt="Screen Shot 2020-11-15 at 10 42 15" src="https://user-images.githubusercontent.com/58472359/99178776-3af28400-2749-11eb-8498-092b018f1623.png">
 <img width="496" alt="Screen Shot 2020-11-15 at 10 42 44" src="https://user-images.githubusercontent.com/58472359/99178778-3c23b100-2749-11eb-9c61-1b72a85c7459.png">
 <img width="512" alt="Screen Shot 2020-11-15 at 10 44 28" src="https://user-images.githubusercontent.com/58472359/99178784-45ad1900-2749-11eb-9bd4-1d502ac8b84a.png">
 <img width="512" alt="Screen Shot 2020-11-15 at 10 54 46" src="https://user-images.githubusercontent.com/58472359/99178794-5e1d3380-2749-11eb-80ec-cef5ff712257.png">
 
--- MOJOKERTO
 <img width="512" alt="Screen Shot 2020-11-15 at 10 57 37" src="https://user-images.githubusercontent.com/58472359/99178839-e996c480-2749-11eb-8498-d7ce15e6358e.png">
 <img width="496" alt="Screen Shot 2020-11-15 at 10 59 31" src="https://user-images.githubusercontent.com/58472359/99178841-eac7f180-2749-11eb-96b7-bd7e60fecef2.png">
 <img width="496" alt="Screen Shot 2020-11-15 at 11 02 29" src="https://user-images.githubusercontent.com/58472359/99178853-016e4880-274a-11eb-9577-552fcc57c2f3.png">
