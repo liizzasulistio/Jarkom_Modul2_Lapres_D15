@@ -16,6 +16,7 @@ Praktikum mata kuliah Jaringan Komputer Informatika ITS 2020 Kelompok D15
 Karena `yyy` merupakan nama kelompok, maka `semeruyyy.pw` diubah menjadi `semerud15.pw`
 
 Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
+
 <img width="496" alt="Screen Shot 2020-11-15 at 10 42 15" src="https://user-images.githubusercontent.com/58472359/99178776-3af28400-2749-11eb-8498-092b018f1623.png">
 <img width="496" alt="Screen Shot 2020-11-15 at 10 42 44" src="https://user-images.githubusercontent.com/58472359/99178778-3c23b100-2749-11eb-9c61-1b72a85c7459.png">
 <img width="512" alt="Screen Shot 2020-11-15 at 10 44 28" src="https://user-images.githubusercontent.com/58472359/99178784-45ad1900-2749-11eb-9bd4-1d502ac8b84a.png">
