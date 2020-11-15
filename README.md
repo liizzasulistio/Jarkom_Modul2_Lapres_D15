@@ -34,16 +34,27 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
         file "/etc/bind/jarkom/semerud15.pw";
    }
    ~~~
+   - Pengecekan dapat dilihat pada no. 2 dan 3
 ### 2. dan 3. Website tersebut memiliki alias `http://www.semerud15.pw` dan Subdomain `http://penanjakan.semerud15.pw` yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO
   - Setelah itu copy file db.local dengan cara berikut `cp /etc/bind/db.local /etc/bind/jarkom/semerud15.pw`
-  - Kemudian buka file `etc/bind/jarkom/semerud15.pw` dan isikan konfigurasi domain sebagai berikut:
+  - Kemudian buka file `etc/bind/jarkom/semerud15.pw` ubah dan isikan konfigurasi domain sebagai berikut:
    ~~~
-   
+   @           IN SOA         semerud15.pw. root.semerud15.pw.(
+   ...
+   @           IN NS    semerud15.pw.
+   @           IN A     10.151.79.132  ;IP PROBOLINGGO
+   www         IN CNAME semerud15.pw.
+   penanjakan  IN A     10.151.79.132   ;IP PROBOLINGGO
    ~~~
+ - Cek dengan cara melakukan `ping [domain]` pada GRESIK dan SIDOARJO, jika sudah menunjukkan IP Server PROBOLINGGO maka jawaban sudah benar
+ - `ping semerud15.pw`
+ - `ping www.semerud15.pw`
+ - `ping penanjakan.semerud15.pw`
 
-4. Buat reverse domain untuk domain utama
-5. Buat DNS slave pada Mojokerto
-6. Buat subdomain dengan alamat `http://gunung.semerud15.pw` yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO
-7. Buat subdomain dengan alamat `http://naik.gunung.semerud15.pw` dan diarahkan pada IP Server PROBOLINGGO
+### 4. Buat reverse domain untuk domain utama
+### 5. Buat DNS slave pada Mojokerto
+### 6. Buat subdomain dengan alamat `http://gunung.semerud15.pw` yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO
+### 7. Buat subdomain dengan alamat `http://naik.gunung.semerud15.pw` dan diarahkan pada IP Server PROBOLINGGO
 
 ## Web Server
+### 8.
