@@ -46,7 +46,7 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
    @           IN NS    semerud15.pw.
    @           IN A     10.151.79.132  ;IP PROBOLINGGO
    www         IN CNAME semerud15.pw.
-   penanjakan  IN A     10.151.79.132   ;IP PROBOLINGGO
+   penanjakan  IN A     10.151.79.132  ;IP PROBOLINGGO
    ~~~
  - Cek dengan cara melakukan `ping [domain]` pada GRESIK dan SIDOARJO, jika sudah menunjukkan IP Server PROBOLINGGO maka jawaban sudah benar.
  - Lakukan `ping semerud15.pw` dan`ping www.semerud15.pw`
