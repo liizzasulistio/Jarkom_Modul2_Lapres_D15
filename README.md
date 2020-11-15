@@ -131,10 +131,25 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
    
 ## Web Server
 ### 8. dan 9. Mengatur Web Server dengan domain `http://semerud15.pw` yang memiliki Document Root pada `/var/www/semerud15.pw`. Kemudian aktifkan mod rewrite agar url yang sebelumnya `http://semerud15.pw/index.php/home` menjadi `http://semerud15.pw/home`.
+![no 8 9](https://user-images.githubusercontent.com/58472359/99187118-44024600-2787-11eb-840e-791b2fc4cb64.jpg)
+
 ### 10. Web `http://penanjakan.semerud15.pw` akan digunakan untuk menyimpan assets file
+![no10](https://user-images.githubusercontent.com/58472359/99187119-4795cd00-2787-11eb-92b2-ed13870d26a1.jpg)
+
 ### 11. Pada folder `/public` dibolehkan directory listing namun tidak untuk folder di dalamnya.
+[no11](https://user-images.githubusercontent.com/58472359/99187128-50869e80-2787-11eb-8bfd-5423169b552a.jpg)
+
 ### 12. Disediakan file `404.html` untuk mengatasi error default dari Apache.
+![no12](https://user-images.githubusercontent.com/58472359/99187131-52e8f880-2787-11eb-8532-bf330dfd52e1.jpg)
+
 ### 13. Konfigurasi virtual host agar ketika mengakses file `http://penanjakan.semerud15.pw/public/javascripts` menjadi `http://penanjakan.semerud15.pw/js`.
+![no13](https://user-images.githubusercontent.com/58472359/99187134-54b2bc00-2787-11eb-8aa6-c33abfe83d6b.jpg)
+
 ### 14. dan 15. Web `http://naik.gunung.semerud15.pw` dapat diakses dengan port 8888 dan diberi autentikasi dengan `username semeru` dan `password kuynaikgunung`.
+![no14](https://user-images.githubusercontent.com/58472359/99187135-55e3e900-2787-11eb-8d4d-9f9e4a4b620d.jpg)
+![no15](https://user-images.githubusercontent.com/58472359/99187137-567c7f80-2787-11eb-8ae9-ee34744c4bcd.jpg)
+
 ### 16. Setiap mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke `http://semerud15.pw`.
+![no16](https://user-images.githubusercontent.com/58472359/99187140-5a100680-2787-11eb-91d2-6dc671005f94.jpg)
+
 ### 17. Semua request gambar yang memiliki substring `semeru` akan diarahkan menuju `semeru.jpg`.
