@@ -32,13 +32,15 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
    zone "semerud15.pw {
         type master;
         file "/etc/bind/jarkom/semerud15.pw";
-   }
+   };
    ~~~
    - Pengecekan dapat dilihat pada no. 2 dan 3
+   
 ### 2. dan 3. Website tersebut memiliki alias `http://www.semerud15.pw` dan Subdomain `http://penanjakan.semerud15.pw` yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO
   - Setelah itu copy file db.local dengan cara berikut `cp /etc/bind/db.local /etc/bind/jarkom/semerud15.pw`
   - Kemudian buka file `etc/bind/jarkom/semerud15.pw` ubah dan isikan konfigurasi domain sebagai berikut:
    ~~~
+   ...
    @           IN SOA         semerud15.pw. root.semerud15.pw.(
    ...
    @           IN NS    semerud15.pw.
@@ -52,9 +54,73 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
  - `ping penanjakan.semerud15.pw`
 
 ### 4. Buat reverse domain untuk domain utama
-### 5. Buat DNS slave pada Mojokerto
-### 6. Buat subdomain dengan alamat `http://gunung.semerud15.pw` yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO
-### 7. Buat subdomain dengan alamat `http://naik.gunung.semerud15.pw` dan diarahkan pada IP Server PROBOLINGGO
-
+   - Buka file `etc/bind/named.conf.local` kemudian tambahkan konfigurasi berikut ini:
+   ~~~
+   zone "79.151.10.in-addr.arpa" {
+        type master;
+        file "/etc/bind/jarkom/79.151.10.in-addr.arpa";
+   };
+   ~~~
+   - Kemudian buka juga file `/etc/bind/jarkom/79.151.10.in-addr.arpa` dan isikan konfigurasi berikut ini:
+   ~~~
+   ...
+   @           IN SOA         semerud15.pw. root.semerud15.pw.(
+   ...
+   79.151.10.in-addr.arpa  IN NS    semerud15.pw.
+   132                     IN PTR   semerud15.pw.  ;BYTE KE-4 IP PROBOLINGGO
+   ~~~
+   - Lakukan pengecekan dengan cara `host -t PTR 10.151.79.132`
+   
+   
+### 5. Buat DNS slave pada MOJOKERTO
+   - Pada MALANG ubah lalu tambahkan konfigurasi berikut ini di file `/etc/bind/named.conf.local`
+   ~~~
+    zone "semerud15.pw {
+        type master;
+        notify yes;
+        also-notify { 10.151.79.131; }; //IP MOJOKERTO
+        allow-transfer { 10.151.79.131; }; //IP MOJOKERTO
+        file "/etc/bind/jarkom/semerud15.pw";
+   };
+   ~~~
+   - Kemudian buka file `/etc/bind/named.conf.local` dan tambahkan konfigurasi berikut ini:
+   ~~~
+   zone "semerud15.pw {
+       type slave;
+       masters { 10.151.79.130; }; //IP MALANG
+       file "/var/lib/bind/semerud15.pw";
+       allow-transfer { any; };
+   };
+   ~~~
+   - Lakukan pengecekan dengan menjalankan `service bind9 stop` pada MALANG dan `ping semerud15.pw` di GRESIK atau SIDOARJO.
+   - Jika ping dapat dilakukan, maka pembuatan DNS slave berhasil.
+   
+### 6. dan 7. Buat subdomain dengan alamat `http://gunung.semerud15.pw` yang didelegasikan pada server MOJOKERTO dan Buat subdomain dengan alamat `http://naik.gunung.semerud15.pw` yang keduanya diarahkan pada IP Server PROBOLINGGO
+   - Pada MALANG tambahkan konfigurasi berikut ini di file `/etc/bind/jarkom/semerud15.pw`
+   ~~~
+   ...
+   ns1      IN A   10.151.79.131  ;IP MOJOKERTO
+   gunung   IN NS  ns1
+   ...
+   ~~~
+   - Kemudian di MOJOKERTO, buka file `/etc/bind/named.conf.local` dan tambahkan konfigurasi berikut ini:
+   ~~~
+   zone "gunung.semerud15.pw" {
+       type master;
+       file "/etc/bind/delegasi/gunung.semerud15.pw";
+       allow-transfer { any; };
+   };
+   ~~~
+   - Setelah itu buka juga file `/etc/bind/delegasi/gunung.semerud15.pw` dan tambahkan konfigurasi berikut ini:
+   ~~~
+   ...
+   @     IN SOA   gunung.semerud15.pw. root.gunung.semerud15.pw.(
+   ...
+   @     IN NS    gunung.semerud15.pw.
+   @     IN A     10.151.79.132  ;IP PROBOLINGGO
+   naik  IN A     gunung.semerud15.pw.
+   ~~~
+   - Lakukan pengecekan dengan cara `ping gunung.semerud15.pw` dan `ping naik.gunung.semerud15.pw`
+   
 ## Web Server
 ### 8.
