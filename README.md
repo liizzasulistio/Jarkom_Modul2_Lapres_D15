@@ -45,3 +45,5 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
 5. Buat DNS slave pada Mojokerto
 6. Buat subdomain dengan alamat `http://gunung.semerud15.pw` yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO
 7. Buat subdomain dengan alamat `http://naik.gunung.semerud15.pw` dan diarahkan pada IP Server PROBOLINGGO
+
+## Web Server
