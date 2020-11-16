@@ -153,3 +153,8 @@ Konfigurasi UML MALANG dan MOJOKERTO secara keseluruhan:
 ![no16](https://user-images.githubusercontent.com/58472359/99187140-5a100680-2787-11eb-91d2-6dc671005f94.jpg)
 
 ### 17. Semua request gambar yang memiliki substring `semeru` akan diarahkan menuju `semeru.jpg`.
+![no17](https://user-images.githubusercontent.com/24503760/99201532-0250ba00-27de-11eb-817d-40b8db333413.png)
+
+Sementara, untuk Probolinggo, ditambahkan beberapa config `RewriteRule` untuk melakukan redirect.
+
+![Probolinggo](https://user-images.githubusercontent.com/24503760/99201539-054baa80-27de-11eb-90ff-65c55a1bee3f.png)
